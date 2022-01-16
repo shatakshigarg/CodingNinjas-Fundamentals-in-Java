@@ -1,0 +1,29 @@
+public class Solution {
+
+	// Return the reversed string. No need to print
+	public static String reverseEachWord(String input) {
+		// Write your code here
+        String ans="";
+        int currentwordstart=0;
+        int i=0;
+        for(;i<input.length();i++){
+            if(input.charAt(i)==' '){
+                int currentwordend=i-1;
+                String reversedword="";
+                for(int j=currentwordstart;j<=currentwordend;j++){
+                    reversedword=input.charAt(j)+reversedword;
+                }
+                ans+=reversedword+" ";
+                currentwordstart=i+1;
+            }
+        }
+         int currentwordend=i-1;
+                String reversedword="";
+                for(int j=currentwordstart;j<=currentwordend;j++){
+                    reversedword=input.charAt(j)+reversedword;
+                }
+                ans+=reversedword;
+        return ans;
+
+	}
+}
