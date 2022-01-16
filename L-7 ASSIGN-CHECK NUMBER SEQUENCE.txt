@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+   	Scanner scan = new Scanner(System.in);
+		int n=scan.nextInt();
+		boolean isseq=false;
+		int pre=scan.nextInt();
+		int next =scan.nextInt();
+		int q=0;
+		if(pre<next) {
+			for(int i=3;i<=n;i++){
+				if(pre<next) {
+					isseq=true;
+				}
+				else {
+					isseq=false;
+					break;
+				}
+				int p=scan.nextInt();
+				pre=next;
+				next=p;
+			}
+			
+		}
+		else if(next<pre) {
+			for(int i=3;i<=n;i++){
+				if(pre>next) {
+					isseq=true;
+				}
+				else {
+					q=i;
+					for(int j=q;j<=n;j++){
+						if(pre<next) {
+							isseq=true;
+						}
+						else {
+							isseq=false;
+							break;
+						}
+						int p=scan.nextInt();
+						pre=next;
+						next=p;
+					}
+					break;
+				}
+				int p=scan.nextInt();
+				pre=next;
+				next=p;
+			}
+		}
+		
+			
+		
+		System.out.println(isseq);
+	}
+}
