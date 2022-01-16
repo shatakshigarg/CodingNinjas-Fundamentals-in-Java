@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+       Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int ans=s.nextInt();
+        int i=1,sum=0,product=1;
+        for(i=1;i<=n;i++){
+            if(ans==1){
+                sum=sum+i;
+            }else if(ans==2){
+                product=product*i;
+            }
+        }
+            if(ans==1)
+                System.out.println(sum);
+            else if(ans==2)
+                System.out.println(product);
+         else
+              System.out.println("-1");
+                
+            
+	}
+}
