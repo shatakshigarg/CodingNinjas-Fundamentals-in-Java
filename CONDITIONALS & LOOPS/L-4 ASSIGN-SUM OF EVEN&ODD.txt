@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+        Scanner s = new Scanner(System.in);
+        int n,a,N,even=0,odd=0;
+        n = s.nextInt();
+        N=n;
+        while(N != 0){
+            a=N%10;
+            if(a%2==0){
+                even=a+even;
+            }
+            else{
+                odd=a+odd;
+            }
+                N=N/10;
+        }
+        System.out.println(even+" "+odd);
+
+	}
+}
