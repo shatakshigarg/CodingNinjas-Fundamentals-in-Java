@@ -1,0 +1,21 @@
+
+public class Solution {
+
+	public static void rowWiseSum(int[][] mat) {
+		//Your code goes here
+        int nrows = mat.length;
+        if(nrows ==0){
+            return;
+        }
+        int mcols =mat[0].length;
+        for(int i=0;i<nrows;i++){
+            int rowsum =0;
+            
+            for(int j=0;j<mcols;j++){
+                rowsum += mat[i][j];
+            }
+            System.out.print(rowsum + " ");
+        }
+	}
+
+}
