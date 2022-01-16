@@ -1,0 +1,28 @@
+public class Solution {
+	public static String getCompressedString(String input) {
+		// Write your code here.
+        if(input==null){
+            return null;
+        }
+        if(input.length()==0){
+            return "";
+        }
+        int stin =0;
+        int endin=0;
+        String compstr="";
+        while(stin<input.length()){
+            while((endin<input.length())&&(input.charAt(endin)==input.charAt(stin))){
+                endin++;
+            }
+            int totalchar = endin - stin;
+            if(totalchar != 1){
+                compstr += (input.charAt(stin)+""+totalchar); 
+            } else{
+                compstr +=input.charAt(stin);
+            }
+            stin = endin;
+        }
+        return compstr;
+	}
+
+}
