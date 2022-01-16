@@ -1,0 +1,31 @@
+
+public class Solution {
+	
+	public static boolean checkMember(int n){
+				
+		/* Your class should be named Solution
+		* Don't write main().
+	 	* Don't read input, it is passed as function argument.
+	 	* Return output and don't print it.
+	 	* Taking input and printing output is handled automatically.
+		*/
+        int n1=1,n2=1;
+        if(n==1||n==2){
+            return true;
+        }else {
+            int n3=0;
+            while(n3<n){
+                n3=n1+n2;
+                n1=n2;
+                n2=n3;
+            }
+            if (n3==n)
+                return true;
+            else
+                return false;
+        }
+
+	}
+	
+
+}
