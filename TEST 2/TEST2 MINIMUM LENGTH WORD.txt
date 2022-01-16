@@ -1,0 +1,33 @@
+
+public class Solution {
+	
+	public static String minLengthWord(String input){
+		
+		// Write your code here
+        int minst = -1;
+        int minlen= Integer.MAX_VALUE;
+        int currst = 0;
+        int i=0;
+        for( ; i<input.length();i++){
+            if(input.charAt(i)==' '){
+                int currwordlen = i-currst;
+                if(currwordlen<minlen){
+                    minst = currst;
+                    minlen = currwordlen;
+                }
+                currst = i+1;
+            }
+        }
+        if(minst == -1){
+            return input;
+        }else{
+            int currwordlen = i-currst;
+            if(currwordlen<minlen){
+                minst = currst;
+                minlen = currwordlen;
+            }
+            return input.substring(minst, minst + minlen);
+        }
+
+	}
+}
