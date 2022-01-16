@@ -1,0 +1,26 @@
+public class Solution {
+
+	public static void leaders(int[] input) {
+		/* Your class should be named Solution 
+		 * Don't write main(). 
+		 * Don't read input, it is passed as function argument. 
+		 * Print output and don't return it. 
+		 * Taking input is handled automatically. 
+		 */
+        if(input== null || input.length == 0){
+            return;
+        }
+        int inputsize = input.length;
+        int currleader = input[inputsize-1];
+        System.out.print("leaders- ");
+        System.out.print(currleader + " ");
+        for(int i=inputsize-2;i>=0;i--){
+            if(input[i]>currleader){
+                currleader = input[i];
+                System.out.print(currleader + " ");
+            }
+        }
+		
+	}
+	
+}
